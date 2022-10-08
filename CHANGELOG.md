@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# streamdeck-idea-plugin Changelog
+# StreamDeck IDEA Plugin Changelog
 
 ## [Unreleased]
 ### Added

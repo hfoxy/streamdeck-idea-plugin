@@ -1,18 +1,19 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.hfoxy.streamdeckideaplugin</id>
-    <name>streamdeck-idea-plugin</name>
+    <id>me.hfox.idea</id>
+    <name>StreamDeck</name>
     <vendor>hfoxy</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.hfoxy.streamdeckideaplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.hfoxy.streamdeckideaplugin.services.MyProjectService"/>
+        <applicationService serviceImplementation="me.hfox.idea.streamdeck.services.RunConfigurationService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.hfoxy.streamdeckideaplugin.listeners.MyProjectManagerListener"
+        <listener class="me.hfox.idea.streamdeck.listeners.ProjectOpenCloseListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
+        <listener class="me.hfox.idea.streamdeck.listeners.RunConfigurationListener"
+                  topic="com.intellij.execution.RunManagerListener"/>
     </applicationListeners>
 </idea-plugin>
