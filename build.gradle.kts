@@ -54,6 +54,11 @@ qodana {
     showReport.set(System.getenv("QODANA_SHOW_REPORT")?.toBoolean() ?: false)
 }
 
+dependencies {
+    implementation("org.java-websocket:Java-WebSocket:1.5.3")
+    implementation("org.json:json:20220924")
+}
+
 tasks {
     wrapper {
         gradleVersion = properties("gradleVersion")

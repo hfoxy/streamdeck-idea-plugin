@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>me.hfox.idea.pi</title>
+    <meta charset="UTF-8" />
+</head>
+<body>
+<!-- Property Inspector -->
+<div class="sdpi-wrapper" id="pi">
+    <!-- Bridge select -->
+    <div class="sdpi-item">
+        <div class="sdpi-item-label" id="bridge-label"></div>
+        <select class="sdpi-item-value select" id="bridge-select">
+            <option id="no-bridges" value="no-bridges"></option>
+            <option disabled></option>
+            <option id="add-bridge" value="add"></option>
+        </select>
+    </div>
+    <!-- Light/Group select -->
+    <div class="sdpi-item">
+        <div class="sdpi-item-label" id="lights-label"></div>
+        <select class="sdpi-item-value select" id="light-select">
+            <optgroup id="groups">
+                <option id="no-groups" value="no-groups"></option>
+            </optgroup>
+            <optgroup id="lights">
+                <option id="no-lights" value="no-lights"></option>
+            </optgroup>
+        </select>
+    </div>
+    <!-- Placeholder for more UI elements -->
+    <div id="placeholder"></div>
+</div>
+<!-- Floating tooltips element -->
+<div class="sdpi-info-label hidden" style="top: -1000px" data-value=""></div>
+</body>
+</html>

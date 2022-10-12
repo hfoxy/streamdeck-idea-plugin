@@ -8,9 +8,12 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="me.hfox.idea.streamdeck.services.RunConfigurationService"/>
+        <applicationService serviceImplementation="me.hfox.idea.streamdeck.services.ProjectService"/>
     </extensions>
 
     <applicationListeners>
+        <listener class="me.hfox.idea.streamdeck.listeners.PluginListener"
+                  topic="com.intellij.ide.plugins.DynamicPluginListener"/>
         <listener class="me.hfox.idea.streamdeck.listeners.ProjectOpenCloseListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
         <listener class="me.hfox.idea.streamdeck.listeners.RunConfigurationListener"
